@@ -55,11 +55,110 @@ class VentanaInicio extends JFrame{
 	    
 	    
 	    JToolBar toolBar=new JToolBar();
-	    
-	       toolBar.add(new JButton("A"));
-	       toolBar.add(new JButton("B"));
-	       toolBar.add(new JButton("C"));
-	       toolBar.add(new JButton("Co"));
+	       JButton botonAdd=new JButton();
+	          ImageIcon add= new ImageIcon("./src/add.png");
+	          botonAdd.setIcon(add);
+	          botonAdd.setText("Add");
+	          botonAdd.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonAdd.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonAdd);
+	          
+	       JButton botonEdit=new JButton();
+	          ImageIcon edit= new ImageIcon("./src/edit.png");
+	          botonEdit.setIcon(edit);
+	          botonEdit.setText("Edit");
+	          botonEdit.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonEdit.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonEdit);
+	          
+	        JButton botonBack=new JButton();
+	          ImageIcon back= new ImageIcon("./src/back.png");
+	          botonBack.setIcon(back);
+	          botonBack.setText("Back");
+	          botonBack.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonBack.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonBack);
+	          
+	        JButton botonNext=new JButton();
+	          ImageIcon next= new ImageIcon("./src/next.png");
+	          botonNext.setIcon(next);
+	          botonNext.setText("Next");
+	          botonNext.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonNext.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonNext);
+	          
+	       JButton botonList=new JButton();
+	          ImageIcon list= new ImageIcon("./src/list.png");
+	          botonList.setIcon(list);
+	          botonList.setText("List");
+	          botonList.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonList.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonList);
+	          
+	        JButton botonSave=new JButton();
+	          ImageIcon save= new ImageIcon("./src/save.png");
+	          botonSave.setIcon(save);
+	          botonSave.setText("Save");
+	          botonSave.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonSave.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonSave);
+	          
+	        JButton botonPrint=new JButton();
+	          ImageIcon print= new ImageIcon("./src/print.png");
+	          botonPrint.setIcon(print);
+	          botonPrint.setText("Print");
+	          botonPrint.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonPrint.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonPrint);
+	          
+	        JButton botonTest=new JButton();
+	          ImageIcon test= new ImageIcon("./src/test.png");
+	          botonTest.setIcon(test);
+	          botonTest.setText("Test");
+	          botonTest.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonTest.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonTest);
+	          
+	       JButton botonCancel=new JButton();
+	          ImageIcon cancel= new ImageIcon("./src/cancel.png");
+	          botonCancel.setIcon(cancel);
+	          botonCancel.setText("Cancel");
+	          botonCancel.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonCancel.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonCancel);
+	          
+	        JButton botonSettings=new JButton();
+	          ImageIcon settings= new ImageIcon("./src/settings.png");
+	          botonSettings.setIcon(settings);
+	          botonSettings.setText("Settings");
+	          botonSettings.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonSettings.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonSettings);
+	          
+	        JButton botonDelete=new JButton();
+	          ImageIcon delete= new ImageIcon("./src/delete.png");
+	          botonDelete.setIcon(delete);
+	          botonDelete.setText("Delete");
+	          botonDelete.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonDelete.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonDelete);
+	          
+	        JButton botonSlip=new JButton();
+	          ImageIcon slip= new ImageIcon("./src/slip.png");
+	          botonSlip.setIcon(slip);
+	          botonSlip.setText("Slip");
+	          botonSlip.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonSlip.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonSlip);
+	          
+	        JButton botonExit=new JButton();
+	          ImageIcon exit= new ImageIcon("./src/exit.png");
+	          botonExit.setIcon(exit);
+	          botonExit.setText("Exit");
+	          botonExit.setHorizontalTextPosition( SwingConstants.CENTER );
+	          botonExit.setVerticalTextPosition( SwingConstants.BOTTOM );
+	          toolBar.add(botonExit);
+	   
 	    add(toolBar,BorderLayout.PAGE_START);
 		
 		
