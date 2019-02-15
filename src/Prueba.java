@@ -9,7 +9,7 @@ class VentanaInicio extends JFrame{
 	menuPrincipalPrinting, menuPrincipalTransaction,menuPrincipalLastReports,
 	menuPrincipalSettings,menuPrincipalUtilities,menuPrincipalWindows,menuPrincipalHelp;
 
-	JInternalFrame internalFrame1;
+	JInternalFrame internalFrame1,internalFrame2,internalFrame3,internalFrame4;
 	
 	
 	public VentanaInicio() {
@@ -164,7 +164,8 @@ class VentanaInicio extends JFrame{
 	     
 	       internalFrame1= new JInternalFrame();
 	       internalFrame1.getContentPane().setLayout(null);
-	       internalFrame1.setSize(1350,200);
+	       internalFrame1.setBounds(0, 0, 1350, 200);
+	       //internalFrame1.setSize(1350,200);
 	       internalFrame1.setVisible(true);
 	    
 	       //componentes del internalFrame1
@@ -259,18 +260,31 @@ class VentanaInicio extends JFrame{
 					cajaDays.setBounds(350,80,30,20);
 					panel1.add(cajaDays);
 					
-					JLabel lblSample=new JLabel("Sample by");
+					JLabel lblSample=new JLabel("Sample By");
 	   				lblSample.setBounds(400,80,70,20);
 	   				panel1.add(lblSample);
-					
+	   				
+	   				
 
-				
-	          
-	          
 	       internalFrame1.add(panel1);
+	       
+	       
+	       internalFrame2= new JInternalFrame();
+	       internalFrame2.getContentPane().setLayout(null);
+	      // internalFrame2.setSize(1350,200);
+	       internalFrame2.setBounds(1350, 200, 500, 500);
+	       internalFrame2.setVisible(true);
+	       
+	       JPanel panel2=new JPanel();
+	       
+	          panel2.setBackground(Color.getHSBColor(230,230,250));
+	          panel2.setSize(1350,200);
+	          panel2.setLayout(null);
+	       internalFrame2.add(panel2);
+	       
 	       desktopPane.add(internalFrame1);
-	       
-	       
+	       //internalFrame2.setContentPane(desktopPane);
+	       desktopPane.add(internalFrame2);
 
 	    add(desktopPane, BorderLayout.CENTER);
 	    
