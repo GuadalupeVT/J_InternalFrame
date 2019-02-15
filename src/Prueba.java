@@ -1,4 +1,7 @@
 import javax.swing.*;
+
+import com.toedter.calendar.JDateChooser;
+
 import java.awt.*;
 import java.util.Calendar;
 import java.util.Date;
@@ -164,7 +167,7 @@ class VentanaInicio extends JFrame{
 	     
 	       internalFrame1= new JInternalFrame();
 	       internalFrame1.getContentPane().setLayout(null);
-	       internalFrame1.setBounds(0, 0, 1350, 200);
+	       internalFrame1.setBounds(0, 0, 1350, 230);
 	       //internalFrame1.setSize(1350,200);
 	       internalFrame1.setVisible(true);
 	    
@@ -172,7 +175,7 @@ class VentanaInicio extends JFrame{
 	       JPanel panel1=new JPanel();
 	       
 	          panel1.setBackground(Color.getHSBColor(131, 246, 125));
-	          panel1.setSize(1350,200);
+	          panel1.setSize(1350,230);
 	          panel1.setLayout(null);
 	          
 	          JLabel lblpatienId=new JLabel("Patient ID");
@@ -264,28 +267,66 @@ class VentanaInicio extends JFrame{
 	   				lblSample.setBounds(400,80,70,20);
 	   				panel1.add(lblSample);
 	   				
+	   				JDateChooser dateChooser =new JDateChooser();
+	   				dateChooser.setBounds(480,80,120,20);
+	   				panel1.add(dateChooser);
+	   				
+	   				JLabel reffered=new JLabel ("Refered By: ");
+	   				reffered.setBounds(5,110,70,20);
+	   				panel1.add(reffered);
+	   				
+	   				JDateChooser dateChooser2 =new JDateChooser();
+	   				dateChooser2.setBounds(80,110,110,20);
+	   				panel1.add(dateChooser2);
+	   				
+	   				JTextField cajaRefered=new JTextField();
+					cajaRefered.setBounds(200,110,180,20);
+					panel1.add(cajaRefered);
+					
+					JLabel lblPanel=new JLabel("Panel Code");
+	   				lblPanel.setBounds(400,110,70,20);
+	   				panel1.add(lblPanel);
+	   				
+	   				JDateChooser dateChooser3 =new JDateChooser();
+	   				dateChooser3.setBounds(480,110,120,20);
+	   				panel1.add(dateChooser3);
+	   				
+	   				JLabel lblPanelId=new JLabel("Panel ID");
+	   				lblPanelId.setBounds(400,140,70,20);
+	   				panel1.add(lblPanelId);
+	   				JTextField cajaPanelId=new JTextField();
+	   				cajaPanelId.setBounds(480,140,100,20);
+	   				panel1.add(cajaPanelId);
+	   				
+	   				JLabel lblEmail=new JLabel("e-mail");
+	   				lblEmail.setBounds(400,170,70,20);
+	   				panel1.add(lblEmail);
+	   				JTextField cajaEmail=new JTextField();
+	   				cajaEmail.setBounds(480,170,100,20);
+	   				panel1.add(cajaEmail);
+	   				
 	   				
 
 	       internalFrame1.add(panel1);
+	       desktopPane.add(internalFrame1);
 	       
+	      
 	       
 	       internalFrame2= new JInternalFrame();
 	       internalFrame2.getContentPane().setLayout(null);
 	      // internalFrame2.setSize(1350,200);
-	       internalFrame2.setBounds(1350, 200, 500, 500);
+	       internalFrame2.setBounds(0, 230, 500, 500);
 	       internalFrame2.setVisible(true);
 	       
 	       JPanel panel2=new JPanel();
 	       
 	          panel2.setBackground(Color.getHSBColor(230,230,250));
-	          panel2.setSize(1350,200);
+	          panel2.setSize(1350,230);
 	          panel2.setLayout(null);
+	      
 	       internalFrame2.add(panel2);
-	       
-	       desktopPane.add(internalFrame1);
-	       //internalFrame2.setContentPane(desktopPane);
 	       desktopPane.add(internalFrame2);
-
+	     
 	    add(desktopPane, BorderLayout.CENTER);
 	    
 	   
