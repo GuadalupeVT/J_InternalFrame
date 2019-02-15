@@ -16,7 +16,10 @@ class VentanaInicio extends JFrame{
 	JButton reestablecer, enviar;
 	
 	public VentanaInicio() {
+		Image iconoInicial = Toolkit.getDefaultToolkit().getImage(getClass().getResource("iconoInicial.png"));
+		setIconImage(iconoInicial);
 		getContentPane().setLayout(new BorderLayout());
+		setTitle("Lab Master- Test Booking");
 		setSize(700, 700);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -24,6 +27,9 @@ class VentanaInicio extends JFrame{
 		
 		JMenuBar menuBar=new JMenuBar();
 		menuPrincipalMasters= new JMenu("Masters");
+		ImageIcon imagen= new ImageIcon("./src/iconoInicial.png");
+		ImageIcon imagen2=new ImageIcon(imagen.getImage().getScaledInstance(15, -1, Image.SCALE_DEFAULT));
+		menuPrincipalMasters.setIcon(imagen2);
 		menuPrincipalBooking=new JMenu("Boking");
 		menuPrincipalTestPermorm=new JMenu("Test Perform");
 		menuPrincipalPrinting=new JMenu("Printing");
@@ -36,11 +42,18 @@ class VentanaInicio extends JFrame{
 		
 		menuBar.add(menuPrincipalMasters);
 		menuBar.add(menuPrincipalBooking);
-		    //Items Menu materias
-	        
-	    
-	   
+		menuBar.add(menuPrincipalTestPermorm);
+		menuBar.add(menuPrincipalPrinting);
+		menuBar.add(menuPrincipalTransaction);
+		menuBar.add(menuPrincipalLastReports);
+		menuBar.add(menuPrincipalSettings);
+		menuBar.add(menuPrincipalUtilities);
+		menuBar.add(menuPrincipalWindows);
+		menuBar.add(menuPrincipalHelp);
+		
 	    setJMenuBar(menuBar);
+	    
+	    
 	    JToolBar toolBar=new JToolBar();
 	    
 	       toolBar.add(new JButton("A"));
