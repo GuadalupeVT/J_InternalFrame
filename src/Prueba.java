@@ -315,22 +315,32 @@ class VentanaInicio extends JFrame{
 	          
 	          JPanel panel3=new JPanel();
 	          panel3.setBounds(10, 10, 900, 230);
-	          panel2.setLayout(null);
-	          panel2.add(panel3);
-	          
-	         // JTable tabla=new JTable();
-	          
-	          Object datos[][]= {};
-	          String columnas[]= {"Test ID","Test Name","Rate","Disc %", "Discount Amonunt",
-	        		  "Tax(%)","Tax Amt"};
-	          DefaultTableModel dtm= new DefaultTableModel(datos,columnas);
-	          final JTable tabla = new JTable(dtm);
-	          tabla.setBounds(0,0,600,200);
-	         // tabla.addColumn(table);
-	          panel3.add(tabla);
+	          panel3.setLayout(null);
 	          
 	          
-	      
+	         JTable tabla=new JTable(2,7);
+	         tabla.setBounds(0,0,800,50);
+	         tabla.setValueAt("Test ID",0,0);
+	         tabla.setValueAt("Test Name",0,1);
+	         tabla.setValueAt("Rate",0,2);
+	         tabla.setValueAt("Disc %",0,3);
+	         tabla.setValueAt("<html>Discount<p>Amount</html>",0,4);
+	         tabla.setValueAt("Tax(%)",0,5);
+	         tabla.setValueAt("Tax Amt",0,6);
+	         tabla.getColumnModel().getColumn(0).setPreferredWidth(100);
+	         tabla.getColumnModel().getColumn(1).setPreferredWidth(400);
+	         tabla.setRowHeight(0, 35);
+	       //  tabla.getColumnModel().getColumn(0).set
+	         panel3.add(tabla);
+	          
+	         
+	         
+	         JLabel totalLess=new JLabel("total less");
+	         totalLess.setBounds(500, 0, 30, 20);
+	         panel3.add(totalLess);
+	         
+	         panel2.add(panel3);
+
 	       internalFrame1.add(panel2);
 	       
 	       desktopPane.add(internalFrame1);
