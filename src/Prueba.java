@@ -396,16 +396,48 @@ class VentanaInicio extends JFrame{
 	         cajaBalance.setBackground(Color.BLUE);
 	         cajaBalance.setBorder(null);
 	         panel2.add(cajaBalance);
-	         
-	        
-
 	       internalFrame1.add(panel2);
+	       
+	       //Panel 4
+	       JPanel panel4=new JPanel();
+	          panel4.setBounds(0, 470, 1350, 60);
+	          panel4.setLayout(null);
+	         
+	          JLabel homeCollection=new JLabel("Home Collection");
+	          homeCollection.setBounds(5, 10, 100, 20);
+	          panel4.add(homeCollection);
+	          JTextField cajaHC=new JTextField();
+	          cajaHC.setBounds(110, 10, 50, 20);
+	          panel4.add(cajaHC);
+	          
+	          JLabel paid=new JLabel("Paid");
+	          paid.setBounds(170, 10, 50, 20);
+	          panel4.add(paid);
+	          JTextField cajapaid=new JTextField();
+	          cajapaid.setBounds(210, 10, 50, 20);
+	          panel4.add(cajapaid);
+	          
+	          JLabel paidT=new JLabel("Paid Type");
+	          paidT.setBounds(270, 10, 70, 20);
+	          panel4.add(paidT);
+	          String combo[] = {"CASH"};
+				JComboBox comboType = new JComboBox<String>(combo);
+			comboType.setBounds(340,10,80,20);
+			panel4.add(comboType);
+			
+			JLabel receipt=new JLabel("Receipt No.");
+	          receipt.setBounds(430, 10, 70, 20);
+	          panel4.add(receipt);
+	          JTextField cajaR=new JTextField();
+	          cajaR.setBounds(510, 10, 100, 20);
+	          panel4.add(cajaR);
+	       internalFrame1.add(panel4);
 	       
 	       desktopPane.add(internalFrame1);
 	       
 	      
 	      
-	     
+	     internalFrame1.setBackground(Color.WHITE);
 	    add(desktopPane, BorderLayout.CENTER);
 	    
 	   
