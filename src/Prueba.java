@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 import com.toedter.calendar.JDateChooser;
 
@@ -167,7 +168,7 @@ class VentanaInicio extends JFrame{
 	     
 	       internalFrame1= new JInternalFrame();
 	       internalFrame1.getContentPane().setLayout(null);
-	       internalFrame1.setBounds(0, 0, 1350, 230);
+	       internalFrame1.setBounds(0, 0, 1350, 610);
 	       //internalFrame1.setSize(1350,200);
 	       internalFrame1.setVisible(true);
 	    
@@ -175,7 +176,7 @@ class VentanaInicio extends JFrame{
 	       JPanel panel1=new JPanel();
 	       
 	          panel1.setBackground(Color.getHSBColor(131, 246, 125));
-	          panel1.setSize(1350,230);
+	          panel1.setSize(1350,200);
 	          panel1.setLayout(null);
 	          
 	          JLabel lblpatienId=new JLabel("Patient ID");
@@ -304,28 +305,38 @@ class VentanaInicio extends JFrame{
 	   				JTextField cajaEmail=new JTextField();
 	   				cajaEmail.setBounds(480,170,100,20);
 	   				panel1.add(cajaEmail);
-	   				
-	   				
-
 	       internalFrame1.add(panel1);
-	       desktopPane.add(internalFrame1);
-	       
-	      
-	       
-	       internalFrame2= new JInternalFrame();
-	       internalFrame2.getContentPane().setLayout(null);
-	      // internalFrame2.setSize(1350,200);
-	       internalFrame2.setBounds(0, 230, 500, 500);
-	       internalFrame2.setVisible(true);
 	       
 	       JPanel panel2=new JPanel();
 	       
-	          panel2.setBackground(Color.getHSBColor(230,230,250));
-	          panel2.setSize(1350,230);
+	          panel2.setBackground(new Color(200,162,200));
+	          panel2.setBounds(0, 210, 1350, 250);
 	          panel2.setLayout(null);
+	          
+	          JPanel panel3=new JPanel();
+	          panel3.setBounds(10, 10, 900, 230);
+	          panel2.setLayout(null);
+	          panel2.add(panel3);
+	          
+	         // JTable tabla=new JTable();
+	          
+	          Object datos[][]= {};
+	          String columnas[]= {"Test ID","Test Name","Rate","Disc %", "Discount Amonunt",
+	        		  "Tax(%)","Tax Amt"};
+	          DefaultTableModel dtm= new DefaultTableModel(datos,columnas);
+	          final JTable tabla = new JTable(dtm);
+	          tabla.setBounds(0,0,600,200);
+	         // tabla.addColumn(table);
+	          panel3.add(tabla);
+	          
+	          
 	      
-	       internalFrame2.add(panel2);
-	       desktopPane.add(internalFrame2);
+	       internalFrame1.add(panel2);
+	       
+	       desktopPane.add(internalFrame1);
+	       
+	      
+	      
 	     
 	    add(desktopPane, BorderLayout.CENTER);
 	    
