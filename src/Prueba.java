@@ -332,14 +332,72 @@ class VentanaInicio extends JFrame{
 	         tabla.setRowHeight(0, 35);
 	       //  tabla.getColumnModel().getColumn(0).set
 	         panel3.add(tabla);
-	          
-	         
+	         panel2.add(panel3);
 	         
 	         JLabel totalLess=new JLabel("total less");
-	         totalLess.setBounds(500, 0, 30, 20);
-	         panel3.add(totalLess);
+	         totalLess.setBounds(950, 5, 60, 20);
+	         panel2.add(totalLess);
+	         JTextField cajaTotalLess=new JTextField();
+	         cajaTotalLess.setBounds(1045, 5, 100, 20);
+	         cajaTotalLess.setBackground(Color.BLUE);
+	         cajaTotalLess.setBorder(null);
+	         panel2.add(cajaTotalLess);
 	         
-	         panel2.add(panel3);
+	         JLabel lestAmt=new JLabel("test Amt.");
+	         lestAmt.setBounds(950, 30, 60, 20);
+	         panel2.add(lestAmt);
+	         JTextField cajaTest=new JTextField();
+	         cajaTest.setBounds(1045, 30, 100, 20);
+	         cajaTest.setBackground(Color.BLUE);
+	         cajaTest.setBorder(null);
+	         panel2.add(cajaTest);
+	         
+	         JLabel concession=new JLabel("Concession");
+	         concession.setBounds(950, 55, 70, 20);
+	         panel2.add(concession);
+	         JTextField cajaConcession=new JTextField();
+	         cajaConcession.setBounds(1045, 55, 100, 20);
+	         cajaConcession.setBackground(Color.BLUE);
+	         cajaConcession.setBorder(null);
+	         panel2.add(cajaConcession);
+	         
+	         JLabel home=new JLabel("Home Colection");
+	         home.setBounds(950, 80, 90, 20);
+	         panel2.add(home);
+	         JTextField cajaHome=new JTextField();
+	         cajaHome.setBounds(1045, 80, 100, 20);
+	         cajaHome.setBackground(Color.BLUE);
+	         cajaHome.setBorder(null);
+	         panel2.add(cajaHome);
+	         
+	         JLabel laxAmt=new JLabel("lax Amt");
+	         laxAmt.setBounds(950, 105, 90, 20);
+	         panel2.add(laxAmt);
+	         JTextField cajalaxAmt=new JTextField();
+	         cajalaxAmt.setBounds(1045, 105, 100, 20);
+	         cajalaxAmt.setBackground(Color.BLUE);
+	         cajalaxAmt.setBorder(null);
+	         panel2.add(cajalaxAmt);
+	         
+	         JLabel netAmt=new JLabel("Net Amt");
+	         netAmt.setBounds(950, 130, 90, 20);
+	         panel2.add(netAmt);
+	         JTextField cajaNetAmt=new JTextField();
+	         cajaNetAmt.setBounds(1045, 130, 100, 20);
+	         cajaNetAmt.setBackground(Color.BLUE);
+	         cajaNetAmt.setBorder(null);
+	         panel2.add(cajaNetAmt);
+	         
+	         JLabel balance=new JLabel("Balance");
+	         balance.setBounds(950, 155, 90, 20);
+	         panel2.add(balance);
+	         JTextField cajaBalance=new JTextField();
+	         cajaBalance.setBounds(1045, 155, 100, 20);
+	         cajaBalance.setBackground(Color.BLUE);
+	         cajaBalance.setBorder(null);
+	         panel2.add(cajaBalance);
+	         
+	        
 
 	       internalFrame1.add(panel2);
 	       
