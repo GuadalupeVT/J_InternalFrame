@@ -433,6 +433,20 @@ class VentanaInicio extends JFrame{
 	          panel4.add(cajaR);
 	       internalFrame1.add(panel4);
 	       
+	       //Panel 5
+	       JPanel panel5=new JPanel();
+	          panel5.setBounds(0, 530, 1350, 60);
+	          panel5.setLayout(null);
+	          panel5.setBackground(Color.BLUE);
+	          
+	          JLabel text=new JLabel("<html><font color=\"white\">"
+	        		  +"F1: Select Test  F2:Save Entry  F3:Perform Test  F4:New Booking  F5:Payment Type  F6:Delete Entry  F7:Conc.  F8:Add Rev. <br>+"
+	        		  + "F9:Test Selected  F11:Print Recipt  F12:Patient Details  Ctrl+F2:Show Concession *Time in 24 Hours <br>+"
+	        		  + "Format(Click on Time Label for more Information)     Value in this field is coming for the Masters</font></html>\"");
+	          text.setBounds(0,0,1350,50);
+	          panel5.add(text);
+	          
+	          internalFrame1.add(panel5);
 	       desktopPane.add(internalFrame1);
 	       
 	      
